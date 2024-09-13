@@ -1,6 +1,6 @@
 # Player Forecast
 
-API for providing services to [Game Statistics](https://player-statistics-xi.vercel.app/) running at [Player Forecast](#)
+API for providing services to [Game Statistics](https://player-statistics-xi.vercel.app/) running at [Player Forecast](https://player-forecast.onrender.com/)
 
 ## API
 

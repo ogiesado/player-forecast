@@ -8,6 +8,12 @@ Bun.serve({
         'https://fantasy.premierleague.com/api/bootstrap-static'
       );
 
+      console.log(
+        gamesDataResponse.ok,
+        gamesDataResponse.status,
+        gamesDataResponse.clone().text()
+      );
+
       return Response.json(await gamesDataResponse.json(), {
         headers: {
           'Access-Control-Allow-Origin': '*',
