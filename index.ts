@@ -5,13 +5,14 @@ Bun.serve({
     if (url.pathname === '/') return new Response('Player Forecasts');
     if (url.pathname === '/raw-game-data') {
       const gamesDataResponse = await fetch(
-        'https://fantasy.premierleague.com/api/bootstrap-static'
+        // 'https://fantasy.premierleague.com/api/bootstrap-static'
+        'https://catfact.ninja/fact'
       );
 
       console.log(
         gamesDataResponse.ok,
         gamesDataResponse.status,
-        await gamesDataResponse.clone().text()
+        gamesDataResponse.statusText
       );
 
       return Response.json(await gamesDataResponse.json(), {
