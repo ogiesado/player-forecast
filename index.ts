@@ -11,7 +11,7 @@ Bun.serve({
       console.log(
         gamesDataResponse.ok,
         gamesDataResponse.status,
-        gamesDataResponse.clone().text()
+        await gamesDataResponse.clone().text()
       );
 
       return Response.json(await gamesDataResponse.json(), {
