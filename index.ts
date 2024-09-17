@@ -17,29 +17,29 @@ Bun.serve({
 
       // Request made with https://www.croxyproxy.com/ and copied with cookie (as Node fetch)
       const gamesDataResponse = await fetch(
-        'https://51.158.54.217/api/bootstrap-static/?__cpo=aHR0cHM6Ly9mYW50YXN5LnByZW1pZXJsZWFndWUuY29t',
+        'https://footballapi.pulselive.com/football/competitions?page=0&pageSize=1000&detail=2',
         {
           headers: {
-            accept:
-              'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+            accept: '*/*',
             'accept-language': 'en-US,en;q=0.9',
             'cache-control': 'no-cache',
+            'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
             pragma: 'no-cache',
+            priority: 'u=1, i',
             'sec-ch-ua':
               '"Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"',
             'sec-ch-ua-mobile': '?0',
             'sec-ch-ua-platform': '"macOS"',
-            'sec-fetch-dest': 'document',
-            'sec-fetch-mode': 'navigate',
-            'sec-fetch-site': 'none',
-            'sec-fetch-user': '?1',
-            'upgrade-insecure-requests': '1',
-            cookie:
-              '__cpc=RXFOUlV0ZjFxdHg5L1VGd1ZrazRKZm5iR3ZOZ1ZobVlPVHpTcWRGdnJBa3RjRkFDdzRNUHpPbzVXcmtWVTVDUVRzeVhsa0tlMTlnalUxU043c3A0N0dsTHpnTFdZM2w1MTBvU0JkWSthSWFnVDAxWWRhY250ODBSK3NsYXZYbUxSSEtnUzdiOWlLR3M4Mys4TlBnNVdjOWZXTElEZmZQbDB4clU2Q0NvUDN1UEN0NXk5UExXWGdtQUcvMnMzZDBuU2RhcE43Zlpyc0kxbkFSVEErU1lCQXJ1WFVMTWoyOG5GVERyZnN1UVY1YmVoKzhNQ0FHb09UbEVvb0QzWWxZK0ZqZ1RPZ3VjeDRNTVVZb3psVTVnVUhCeDVTSlAvZXlSQm5QTEVqdmpBL1VISDZlRzJ5MEczeVNCaHNkNDRrcHplQkJIMysvd3VLS1g3NWhrV2dSREFCYWJSNVZjVTdRWElJQmVTVVdZY2p0RkEyV2o1eTlNNTlNcldLZ0RJQXQvc05IT3FINzVMQVRPeEttSmFUZ2V0RTF3TXU3UnJIMlB5NVRoYWNLZmplbTNhOG5Bdmd5ekhjWkIzcGdjUGplZUJQS1hVUjFsc0cwYVNuNUg1eGlmUHc9PQ==; __cpcPopShown=1',
+            'sec-fetch-dest': 'empty',
+            'sec-fetch-mode': 'cors',
+            'sec-fetch-site': 'cross-site',
+            Referer: 'https://www.premierleague.com/',
+            'Referrer-Policy': 'strict-origin-when-cross-origin',
+            'User-Agent':
+              'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
+            Origin: 'https://www.premierleague.com',
           },
-          referrerPolicy: 'strict-origin-when-cross-origin',
-          body: null,
-          method: 'GET',
+          verbose: true,
         }
       );
 
